@@ -1,6 +1,6 @@
 
-# Pleio Theme for Concierge
-This is the Pleio theme for concierge.
+# Government of Canada theme for Concierge
+This is the Government of Canada theme for Concierge.
 
 ## Quick start
 
@@ -9,7 +9,7 @@ This is the Pleio theme for concierge.
     pip install concierge_theme_gc
 
 ### Configure
-Add "concierge_theme_pleio" to concierge's INSTALLED_APPS by adding it your
+Add "concierge_theme_gc" to concierge's INSTALLED_APPS by adding it your
 config.py's INSTALLED_APPS_PREFIX array.
 
     INSTALLED_APPS_PREFIX = [
