@@ -1,0 +1,14 @@
+*.egg-info
+*.pyc
+.babel
+__pycache__
+db.sqlite3
+node_modules
+npm-debug.log
+media/
+.idea/
+concierge/config.py
+.vscode/
+webpack-stats.json
+concierge_theme_pleio/static/bundles
+dist
