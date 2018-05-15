@@ -9,6 +9,22 @@
 {% block content %}
     <h2 class="ui header">{% trans "Profile" %}</h2>
 
+    {% if messages %}
+        <ul class="messages correct">
+            {% for message in messages %}
+            <li>
+                {% include_asset "icons/check.svg" %}
+                {% if 'email' in message.tags %}
+                    <div class="textcolor_primary">{% trans "Email address changed" %}</div>
+                    <div class="textcolor_secondary">{% trans "You can now login using your new email adress" %}</div>
+                {% else %}
+                    <div class="textcolor_secondary">{{ message }}</div>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
     <form enctype="multipart/form-data" method="post" action="." class="ui form">
         <div class="account__cards ui cards">
             <div class="card ___nopadding ui card">
@@ -32,6 +48,13 @@
                         {{ form.errors.receives_newsletter }}
                         {{ form.receives_newsletter }}
                     </div>
+                    {% if text_change_pending %}
+                        <div>
+                            {{ text_change_pending }}<b>{{ text_email }}</b><br>
+                            {% trans "Please check your inbox to validate the change." %}<br> 
+                            {% trans "Click " %}<a href="{% url 'change_email' %}"><b>{% trans "here" %}</b></a> {% trans "to resend the confirmation e-mail." %}
+                        </div>
+                    {% endif %}
                 </fieldset>
 		</div>
                 <div class="card__action ___addpadding-side extra content">
