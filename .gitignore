@@ -10,5 +10,5 @@ media/
 concierge/config.py
 .vscode/
 webpack-stats.json
-concierge_theme_pleio/static/bundles
+concierge_theme_gc/static/bundles
 dist
