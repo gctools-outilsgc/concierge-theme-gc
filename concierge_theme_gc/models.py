@@ -25,18 +25,3 @@ class AppCustomization(models.Model):
     display_logo_title = models.BooleanField("Display Logo and Title together", default=True)
     footer_image_left = models.FileField(null=True, blank=True)
     footer_image_right = models.FileField(null=True, blank=True)
-
-class UserAdmin(UserAdmin):
-    search_fields = ModelAdmin.search_fields = ('username', 'name', 'email',)
-    list_filter = ModelAdmin.list_filter + ('is_active', 'is_admin',)
-    list_display = ModelAdmin.list_display + ('is_active',)
-    filter_horizontal = ()
-    ordering = ('-id', )
-    fieldsets = add_fieldsets = (
-        (None, {'fields': ('last_login', 'name', 'email', 'password', 'avatar',)}),
-        ('Settings', {'fields': ('accepted_terms', 'receives_newsletter', 'is_active', 'is_admin',)}),
-    )
-
-
-admin.site.register(AppCustomization)
-# admin.site.register(User, UserAdmin)   -- can't register it twice...

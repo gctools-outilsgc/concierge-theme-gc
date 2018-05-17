@@ -6,7 +6,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='concierge_theme_gc',
-    version='0.3.1',
+    version='0.3.3',
     packages=find_packages(),
     include_package_data=True,
     license='OSI Approved :: European Union Public Licence 1.1 (EUPL 1.1)',
