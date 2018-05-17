@@ -11,4 +11,4 @@ concierge/config.py
 .vscode/
 webpack-stats.json
 concierge_theme_gc/static/bundles
-dist
+/dist
